@@ -1,0 +1,29 @@
+{
+  "name": "sequelize-heroku",
+  "version": "1.0.0",
+  "description": "Easily connects your node app to Heroku databases with Sequelize",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iwazaru/sequelize-heroku.git"
+  },
+  "keywords": [
+    "heroku",
+    "sequelize",
+    "database",
+    "mysql",
+    "postgresql"
+  ],
+  "author": "Clément Bourgoin <cb@nokto.net> (http://nokto.net/)",
+  "license": "MIT",
+  "dependencies": {
+    "sequelize": "^2.0.0-rc4"
+  },
+  "devDependencies": {
+    "mysql": "^2.5.4",
+    "pg": "^4.1.1"
+  }
+}
