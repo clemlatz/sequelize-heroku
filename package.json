@@ -1,70 +1,15 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "sequelize-heroku",
-        "scope": null,
-        "escapedName": "sequelize-heroku",
-        "name": "sequelize-heroku",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "C:\\wamp64\\www\\node-api-js"
-    ]
-  ],
-  "_from": "sequelize-heroku@latest",
-  "_id": "sequelize-heroku@1.0.0",
-  "_inCache": true,
-  "_location": "/sequelize-heroku",
-  "_npmUser": {
-    "name": "iwazaru",
-    "email": "cb@nokto.net"
-  },
-  "_npmVersion": "1.4.28",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "sequelize-heroku",
-    "scope": null,
-    "escapedName": "sequelize-heroku",
-    "name": "sequelize-heroku",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/sequelize-heroku/-/sequelize-heroku-1.0.0.tgz",
-  "_shasum": "7a4b0b67d5a13b7d1d72653cb53a1b2c35710607",
-  "_shrinkwrap": null,
-  "_spec": "sequelize-heroku",
-  "_where": "C:\\wamp64\\www\\node-api-js",
-  "author": {
-    "name": "Clément Bourgoin",
-    "email": "cb@nokto.net",
-    "url": "http://nokto.net/"
-  },
-  "bugs": {
-    "url": "https://github.com/iwazaru/sequelize-heroku/issues"
-  },
-  "dependencies": {
-    "mysql2": "^1.4.0",
-    "sequelize": "^4.4.2"
-  },
+  "name": "sequelize-heroku",
+  "version": "1.0.0",
   "description": "Easily connects your node app to Heroku databases with Sequelize",
-  "devDependencies": {
-    "mysql": "^2.5.4",
-    "pg": "^7.1.0"
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
   },
-  "directories": {},
-  "dist": {
-    "shasum": "7a4b0b67d5a13b7d1d72653cb53a1b2c35710607",
-    "tarball": "https://registry.npmjs.org/sequelize-heroku/-/sequelize-heroku-1.0.0.tgz"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iwazaru/sequelize-heroku.git"
   },
-  "gitHead": "8f0d9d598e09949fa9d3073cd95a9a7be6bfce12",
-  "homepage": "https://github.com/iwazaru/sequelize-heroku",
   "keywords": [
     "heroku",
     "sequelize",
@@ -72,23 +17,13 @@
     "mysql",
     "postgresql"
   ],
+  "author": "Clément Bourgoin <cb@nokto.net> (http://nokto.net/)",
   "license": "MIT",
-  "main": "index.js",
-  "maintainers": [
-    {
-      "name": "iwazaru",
-      "email": "cb@nokto.net"
-    }
-  ],
-  "name": "sequelize-heroku",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iwazaru/sequelize-heroku.git"
+  "dependencies": {
+    "sequelize": "^4.4.2"
   },
-  "scripts": {
-    "test": "node tests/index.js"
-  },
-  "version": "1.0.0"
+  "devDependencies": {
+    "mysql": "^2.5.4",
+    "pg": "^4.1.1"
+  }
 }
