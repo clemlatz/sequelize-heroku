@@ -11,8 +11,7 @@ Currently works with Heroku Postgres and ClearDB MySQL.
 
 ## Usage
 
-    var sequelize = require('sequelize-heroku').connect();
-    
+    var sequelize = require('../index').connect();
     if (sequelize)
     {
         sequelize.authenticate().then( function() {
@@ -47,4 +46,5 @@ Then launch your app with:
     DATABASE_URL="postgres://user:pass@host:port/database" node app.js
 
 
+>>>>>>> e8e6d755396a1986cd76c36273ec95bfde757a55
 You can off course also use your own local database by passing the correct connection string.

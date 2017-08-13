@@ -8,42 +8,41 @@ module.exports = {
         
         // Look for ClearDB MySQL Add-on
         if (process.env.CLEARDB_DATABASE_URL) {
-            
-            match = process.env.CLEARDB_DATABASE_URL.match(/mysql:\/\/([^:]+):([^@]+)@([^:]+)\/(.+)\?/);
-            
+            const userOptions = process.env.CLEARDB_DATABASE_URL.split('@')[0].split('//')[1].split(':');
+            const dbOptions = process.env.CLEARDB_DATABASE_URL.split('@')[1].split('/');
+
             config = {
-                user: match[1],
-                pass: match[2],
-                base: match[4],
+                user: userOptions[0],
+                pass: userOptions[1],
+                base: dbOptions[1],
                 options: {
                     dialect: 'mysql',
-                    protocol: 'mysql',
-                    host: match[3],
-                    port: 3306,
+//                        protocol: 'mysql',
+                    host: dbOptions[0].split(':')[0],
+                    port: dbOptions[0].split(':')[1],
                     logging: false,
                     dialectOptions: {
                         ssl: true
                     }
                 }
             };
-            
         }
         
         // Else, lookf for Heroky Postgresql
         else if (process.env.DATABASE_URL) {
-            
-            match = process.env.DATABASE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
+            const userOptions = process.env.DATABASE_URL.split('@')[0].split('//')[1].split(':');
+            const dbOptions = process.env.DATABASE_URL.split('@')[1].split('/');
             
             config = {
-                user: match[1],
-                pass: match[2],
-                base: match[5],
+                user: userOptions[0],
+                pass: userOptions[1],
+                base: dbOptions[1],
                 options: {
                     dialect: 'postgres',
                     protocol: 'postgres',
-                    host: match[3],
+                    host: dbOptions[0].split(':')[0],
+                    port: dbOptions[0].split(':')[1],
                     logging: false,
-                    port: match[4],
                     dialectOptions: {
                         ssl: true
                     }
