@@ -2,6 +2,10 @@ module.exports = {
 
     connect: function (Sequelize) {
 
+        if (typeof Sequelize === 'undefined') {
+            throw new Error('You must pass sequelize as an argument to the sequelize-heroku connect method (see README).');
+        }
+
         var match, config;
 
         // Look for ClearDB MySQL Add-on
@@ -27,7 +31,7 @@ module.exports = {
 
         }
 
-        // Else, lookf for Heroky Postgresql
+        // Else, look for Heroky Postgresql
         else if (process.env.DATABASE_URL) {
 
             match = process.env.DATABASE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);

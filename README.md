@@ -8,7 +8,8 @@ Currently works with Heroku Postgres and ClearDB MySQL.
 /!\ Breaking change: as of 2.0.0, `sequelize` is no more a dependency of
 `sequelize-heroku`. You must add it to your project, require it, and pass it
 to the `connect` method of `sequelize-heroku` (see Usage section). This allow 
-you to choose the version you want to use with `sequelize-heroku`.
+you to choose the version of `sequelize` you want to use with 
+`sequelize-heroku`.
 
 ## Installation
 
