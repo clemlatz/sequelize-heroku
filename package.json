@@ -1,6 +1,6 @@
 {
   "name": "sequelize-heroku",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Easily connects your node app to Heroku databases with Sequelize",
   "main": "index.js",
   "scripts": {
