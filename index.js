@@ -1,16 +1,14 @@
-var Sequelize = require('sequelize');
-
 module.exports = {
 
-    connect: function() {
-        
+    connect: function (Sequelize) {
+
         var match, config;
-        
+
         // Look for ClearDB MySQL Add-on
         if (process.env.CLEARDB_DATABASE_URL) {
-            
+
             match = process.env.CLEARDB_DATABASE_URL.match(/mysql:\/\/([^:]+):([^@]+)@([^:]+)\/(.+)\?/);
-            
+
             config = {
                 user: match[1],
                 pass: match[2],
@@ -26,14 +24,14 @@ module.exports = {
                     }
                 }
             };
-            
+
         }
-        
+
         // Else, lookf for Heroky Postgresql
         else if (process.env.DATABASE_URL) {
-            
+
             match = process.env.DATABASE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
-            
+
             config = {
                 user: match[1],
                 pass: match[2],
@@ -49,17 +47,16 @@ module.exports = {
                     }
                 }
             };
-            
+
         }
-        
-        if (config)
-        {
+
+        if (config) {
             sequelize = new Sequelize(config.base, config.user, config.pass, config.options);
-            
+
             return sequelize;
         }
-        
+
         return false;
     }
-    
+
 };

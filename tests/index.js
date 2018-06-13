@@ -1,4 +1,4 @@
-var sequelize = require('../index').connect();
+var sequelize = require('../index').connect(require('sequelize'));
 
 if (sequelize) {
     sequelize
@@ -8,13 +8,9 @@ if (sequelize) {
             console.log('sequelize-heroku: Connected to ' + config.host + ' as ' + config.username + '.');
 
             sequelize.query('SELECT 1+1 as test').then(function (res) {
-
-                console.log(res[0][0]);
                 console.log('1+1=' + res[0][0].test);
-
+                process.exit();
             });
-
-            process.exit();
 
         }).catch(function (err) {
             var config = sequelize.connectionManager.config;
