@@ -52,3 +52,11 @@ Then launch your app with:
     DATABASE_URL="postgres://user:pass@host:port/database" node app.js
 
 You can off course also use your own local database by passing the correct connection string.
+
+
+## Tests
+
+Test runner must be passed database url as a environnement variable (see Local
+usage section) in order to test connection:
+
+    $ DATABASE_URL=mysql://... yarn test
