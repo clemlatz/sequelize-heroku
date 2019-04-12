@@ -11,6 +11,8 @@ to the `connect` method of `sequelize-heroku` (see Usage section). This allow
 you to choose the version of `sequelize` you want to use with 
 `sequelize-heroku`.
 
+[Changelog](https://github.com/iwazaru/sequelize-heroku/releases)
+
 ## Installation
 
     npm install sequelize-heroku --save
