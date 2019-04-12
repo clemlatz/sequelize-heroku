@@ -11,11 +11,13 @@ it('connects to database from environnement variables', done => {
     .authenticate()
     .then(function () {
       sequelize.query('SELECT 1+1 as result').then(function (res) {
+        sequelize.close();
         const result = res[0][0].result;
         expect(result).toBe(2);
         done();
       });
     }).catch(function (err) {
+      sequelize.close();
       var config = sequelize.connectionManager.config;
       console.log('Sequelize: Error connecting ' + config.host + ' as ' + config.user + ': ' + err);
       done();
