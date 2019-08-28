@@ -32,6 +32,7 @@ module.exports = {
     }
 
     if (url) {
+      options.logging = false;
       sequelize = new Sequelize(url, options);
       return sequelize;
     }
