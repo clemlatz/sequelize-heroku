@@ -1,6 +1,8 @@
 sequelize-heroku
 ================
 
+/!\ This package is no longer needed to connect sequelize to heroku database and is not maintained anymore /!\
+
 Easily connects your node app to Heroku databases with Sequelize by parsing Heroku's environnement variable (eg. `DATABASE_URL` for Heroku Postgres), so you don't need to worry about credentials, hard code them into your code or use a config file.
 
 Currently works with Heroku Postgres and ClearDB MySQL.
