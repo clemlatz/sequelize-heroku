@@ -1,10 +1,10 @@
 {
   "name": "sequelize-heroku",
-  "version": "2.1.5",
-  "description": "Easily connects your node app to Heroku databases with Sequelize",
+  "version": "2.1.6",
+  "description": "DEPRECATED Easily connects your node app to Heroku databases with Sequelize",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "titef ./index.test.js"
   },
   "repository": {
     "type": "git",
@@ -19,12 +19,7 @@
   ],
   "author": "Clément Bourgoin <cb@nokto.net> (http://nokto.net/)",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "jest": "^24.7.1",
-    "mysql": "^2.17.1",
-    "mysql2": "^2.1.0",
-    "pg": "^7.4.3",
-    "sequelize": "^5.3.0"
+    "titef": "^2.3.2"
   }
 }
