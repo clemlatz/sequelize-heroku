@@ -4,7 +4,7 @@
   "description": "DEPRECATED Easily connects your node app to Heroku databases with Sequelize",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "titef ./index.test.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,7 @@
   ],
   "author": "Clément Bourgoin <cb@nokto.net> (http://nokto.net/)",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "jest": "^24.7.1"
+    "titef": "^2.3.2"
   }
 }
